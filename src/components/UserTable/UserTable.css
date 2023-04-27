@@ -1,0 +1,24 @@
+.table-testing-container {
+  width: 90vw;
+  padding: 20px;
+  margin-left: 15%;
+  margin-top: 10%;
+}
+.search-invite-container {
+  margin-bottom: 30px;
+  width: 95%;
+}
+.user-table-search-button {
+  
+  background-color: #42a5f5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s;
+}
+.user-table-search-button:hover {
+  background-color: blue;
+}

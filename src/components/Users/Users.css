@@ -1,0 +1,10 @@
+.users-container-main {
+    display: flex;
+    flex-direction: row;
+  
+    height: 100vh;
+  }
+  .user-table-container-main {
+    display: flex;
+    flex-direction: row;
+  }

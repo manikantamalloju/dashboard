@@ -1,0 +1,124 @@
+.survey-form-main-container{
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    padding-top:30px;
+    height: 100vh;
+
+}
+ 
+
+.survey-options-list-container{
+    padding-left: 0px;
+    list-style-type: none;
+}
+.survey-form-question{
+    font-family: "Roboto";
+    font-size: 20px;
+    color: #2c2c2c;
+}
+.survey-form-option-label{
+    font-family: "Roboto";
+    font-size: 16px;
+    color: #2c2c2c;
+    margin-left:5px;
+}
+.survey-btn{
+    font-family: "Roboto";
+    font-size: 12px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: #1665D8;
+    height: 30px;
+    width: 90px;
+    margin: 10px;
+    font-weight: 800;
+}
+.survey-form-error-msg{
+    font-family: "Roboto";
+    font-size: 12px;
+    color:red;
+}
+
+.survey-completed-view-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+   
+}
+.survey-completed-view-heading{
+    font-family: "sarif";
+    font-size: 20px;
+}
+.survey-completed-caption{
+    font-family: "Roboto";
+    font-size: 15px;
+}
+.survey-form-responsive-container{
+    min-height: 130px;
+}
+.survey-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+/* .survey-form-container{
+    height: 100vh;
+} */
+
+@media screen and (min-width: 768px) {
+
+    .survey-form-main-container{
+         padding-top: 30vh;
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+    }
+    .survey-form-container{
+        background-color: #ffffff;
+        width: 60%;
+        padding:30px;
+       
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .survey-form-question{
+        font-size: 30px;
+    }
+    .survey-form-option-label{
+        font-size: 26px;
+    }
+     .survey-btn{
+        width: 180px;
+        height: 60px;
+        font-size: 18px;
+     }
+     /* .survey-button-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     } */
+      
+     input[type=radio] {
+        width:20px; 
+        height: 20px;
+
+    }
+    .survey-form-error-msg{
+        font-size: 16px;
+    }
+    .survey-completed-view-heading{
+        font-size: 35px;
+    }
+    .survey-completed-caption{
+        font-size: 20px;
+    }
+    .survey-form-responsive-container{
+        height: 200px;
+    }
+  }

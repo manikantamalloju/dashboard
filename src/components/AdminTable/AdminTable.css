@@ -1,0 +1,34 @@
+.table-testing-admin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.search-invite-admin-container {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.table-search-button {
+  background-color: #42a5f5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s;
+}
+.table-search-button:hover {
+  background-color: blue;
+}
+.search-container-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-search-table {
+  border: none;
+  outline: none;
+}

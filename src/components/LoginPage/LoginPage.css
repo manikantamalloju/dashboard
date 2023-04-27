@@ -1,0 +1,161 @@
+.login {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 40px;
+  width: 70%;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  animation: slide-up 1s;
+}
+/* Large screens */
+@media (min-width: 768px) {
+  .login-container {
+    background-color: #fff;
+    padding: 40px;
+    width: 20%;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    animation: slide-up 1s;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.login-head {
+  text-align: center;
+  margin-bottom: 5px;
+}
+/* h1 {
+  text-align: center;
+  margin-bottom: 5px;
+} */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* form {
+  display: flex;
+  flex-direction: column;
+} */
+
+.form-control {
+  width: 100%;
+}
+
+label {
+  display: block;
+}
+
+.user-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+/* need to remove */
+/* input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+} */
+.login-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s;
+}
+.login-button:hover {
+  background-color: #3e8e41;
+}
+/* button_change */
+/* button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: #3e8e41;
+} */
+
+.signup-link {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-family: sans-serif;
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.error {
+  display: flex;
+
+  justify-content: flex-start;
+
+  font-size: 8px;
+  font-family: sans-serif;
+  animation: fade-in 1s;
+  color: red;
+}
+.password-input {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+.password-row {
+  border-radius: 5px;
+  border: #e5e5e5;
+  border-width: 2px;
+  border-style: solid;
+}
+.signIn-routing-button {
+  display: flex;
+  justify-content: flex-end;
+}
+.login-errMsg {
+  color: red;
+  text-align: center;
+}
