@@ -14,7 +14,7 @@ const AdminProtectedRoute = (props) => {
 
     if (!accessToken || accessToken === undefined) {
       setIsLoggedIn(false);
-     return navigate("/login",{replace:true});
+      return navigate("/login", { replace: true });
     }
     setIsLoggedIn(true);
     if (isLoggedIn && role === "admin") {

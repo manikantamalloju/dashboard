@@ -21,7 +21,7 @@ function Survey() {
 
   const getSurveyStatus = () => {
     axios
-      .get(url.API+`survey/${surveyId}`)
+      .get(url.API + `survey/${surveyId}`)
       .then((response) => {
         if (response.statusText === "OK") {
           console.log(response);
@@ -88,7 +88,7 @@ function Survey() {
     if (selectedOptions[currentQuestion]) {
       if (currentQuestion === questions.length - 1) {
         axios
-          .patch("/submitSurveyForm", { survey_id: surveyId })
+          .patch(url.API + "submitSurveyForm", { survey_id: surveyId })
           .then((response) => {
             if (response.statusText === "OK") {
               console.log(response);
@@ -151,7 +151,7 @@ function Survey() {
               </h1>
               <ul className="survey-options-list-container">
                 {questions[currentQuestion].options.map((option, index) => (
-                  <li key={index}>
+                  <li key={index} className="survey-list">
                     <Field
                       type="radio"
                       name={`question${currentQuestion}`}

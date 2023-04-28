@@ -1,43 +1,9 @@
 import { url } from "../config";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import {
-  BarChart,
-  Bar,
-  
-  XAxis,
-  YAxis,
-  Tooltip,
-  CartesianGrid,
-  
-} from "recharts";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 
 import "./index.css";
-
-// const da = [
-//   {
-//     status_count: {
-//       active_users: 2,
-//       inactive_users: 1,
-//     },
-//     user_data: [
-//       {
-//         username: "ravisabbi",
-//         no_surveys: 3,
-//       },
-//       {
-//         username: "jb",
-//         no_surveys: 2,
-//       },
-//       {
-//         username: "naiduKotha",
-//         no_surveys: 3,
-//       },
-//     ],
-//   },
-// ];
-// console.log(da[0].user_data);
-// const data = da[0].user_data;
 
 const BarCharts = () => {
   const [getUsersCount, setgetUsersCount] = useState({
@@ -94,7 +60,6 @@ const BarCharts = () => {
           <Bar dataKey="no_surveys" fill="#8884d8" barSize={40} />
         </BarChart>
       </div>
-      
     </div>
   );
 };

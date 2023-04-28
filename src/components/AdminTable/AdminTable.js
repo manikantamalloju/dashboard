@@ -216,7 +216,6 @@ export default function CustomPaginationActionsTable() {
   };
 
   const sendMailData = () => {
-    
     if (email === "") {
       setEmailError("Enter Email");
     } else if (emailError === "") {
@@ -261,12 +260,34 @@ export default function CustomPaginationActionsTable() {
   };
   const storingSearchValue = (event) => {
     setSearchValue(event.target.value);
+    if (event.target.value.length > 3) {
+      getSearchValues();
+    }
+    // if(event.target.value.length===0){
+    //   getUSersData()
+    // }
+  };
+
+  const getSearchValues = () => {
+    axios
+      // add id here
+      .get(url.API + "getUsers?search_result=" + searchValue)
+      .then((response) => {
+        if (response.statusText === "OK") {
+          /** console.log(response.data);*/
+
+          setRowValues(response.data);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   //geting userdata
   const getUSersData = () => {
     axios
       // add id here
-      .get(url.API + "getUsers?search_result=" + searchValue)
+      .get(url.API + "getUsers")
       .then((response) => {
         if (response.statusText === "OK") {
           /** console.log(response.data);*/
@@ -354,7 +375,13 @@ export default function CustomPaginationActionsTable() {
               <TableRow>
                 <StyledTableCell>
                   <ArrowUpwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("id");
                       setSortOrder("desc");
@@ -362,7 +389,13 @@ export default function CustomPaginationActionsTable() {
                   />
                   ID
                   <ArrowDownwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("id");
                       setSortOrder("asc");
@@ -372,7 +405,13 @@ export default function CustomPaginationActionsTable() {
 
                 <StyledTableCell>
                   <ArrowUpwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("firstname");
                       setSortOrder("desc");
@@ -380,7 +419,13 @@ export default function CustomPaginationActionsTable() {
                   />
                   FirstName
                   <ArrowDownwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("firstname");
                       setSortOrder("asc");
@@ -389,7 +434,13 @@ export default function CustomPaginationActionsTable() {
                 </StyledTableCell>
                 <StyledTableCell>
                   <ArrowUpwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("lastname");
                       setSortOrder("desc");
@@ -397,7 +448,13 @@ export default function CustomPaginationActionsTable() {
                   />
                   LastName
                   <ArrowDownwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("lastname");
                       setSortOrder("asc");
@@ -406,7 +463,13 @@ export default function CustomPaginationActionsTable() {
                 </StyledTableCell>
                 <StyledTableCell>
                   <ArrowUpwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("username");
                       setSortOrder("desc");
@@ -414,7 +477,13 @@ export default function CustomPaginationActionsTable() {
                   />
                   UserName
                   <ArrowDownwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("username");
                       setSortOrder("asc");
@@ -423,7 +492,13 @@ export default function CustomPaginationActionsTable() {
                 </StyledTableCell>
                 <StyledTableCell>
                   <ArrowUpwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("email");
                       setSortOrder("desc");
@@ -431,7 +506,13 @@ export default function CustomPaginationActionsTable() {
                   />
                   Email{" "}
                   <ArrowDownwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("email");
                       setSortOrder("asc");
@@ -440,7 +521,13 @@ export default function CustomPaginationActionsTable() {
                 </StyledTableCell>
                 <StyledTableCell>
                   <ArrowUpwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("action");
                       setSortOrder("desc");
@@ -448,7 +535,13 @@ export default function CustomPaginationActionsTable() {
                   />
                   Action{" "}
                   <ArrowDownwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("action");
                       setSortOrder("asc");
@@ -506,7 +599,7 @@ export default function CustomPaginationActionsTable() {
             <TableFooter>
               <TableRow>
                 <TablePagination
-                  rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
+                  rowsPerPageOptions={[5, 10, 25]}
                   colSpan={3}
                   count={rowValues.length}
                   rowsPerPage={rowsPerPage}

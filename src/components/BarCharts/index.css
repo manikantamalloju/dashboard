@@ -15,8 +15,8 @@
   margin-right: 10px;
 }
 .count-container-1 {
-  width: 300px;
-  height: 200px;
+  width: 20%;
+  height: 100%;
   display: flex;
   margin-right: 10px;
   flex-direction: column;
@@ -27,8 +27,8 @@
   border-radius: 20px;
 }
 .count-container-2 {
-  width: 300px;
-  height: 200px;
+  width: 20%;
+  height: 100%;
   display: flex;
   margin-right: 10px;
   flex-direction: column;
@@ -53,13 +53,14 @@
   /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
   display: block;
   text-align: center;
-  
+
   font-family: sans-serif;
   animation: fade-in 1s;
 }
 .heading-count {
   color: white;
   font-family: "Courier New", Courier, monospace;
-  size: 60px;text-align: center;
+
+  text-align: center;
   margin-bottom: 5px;
 }

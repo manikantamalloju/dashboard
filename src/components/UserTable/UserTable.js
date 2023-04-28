@@ -347,7 +347,13 @@ export default function CustomPaginationActionsTable() {
               <TableRow>
                 <StyledTableCell>
                   <ArrowUpwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("id");
                       setSortOrder("desc");
@@ -355,7 +361,13 @@ export default function CustomPaginationActionsTable() {
                   />
                   Id
                   <ArrowDownwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("id");
                       setSortOrder("asc");
@@ -365,7 +377,13 @@ export default function CustomPaginationActionsTable() {
 
                 <StyledTableCell>
                   <ArrowUpwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("email");
                       setSortOrder("desc");
@@ -373,7 +391,13 @@ export default function CustomPaginationActionsTable() {
                   />
                   Email
                   <ArrowDownwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("email");
                       setSortOrder("asc");
@@ -383,7 +407,13 @@ export default function CustomPaginationActionsTable() {
 
                 <StyledTableCell>
                   <ArrowUpwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("date");
                       setSortOrder("desc");
@@ -391,7 +421,13 @@ export default function CustomPaginationActionsTable() {
                   />
                   Date
                   <ArrowDownwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("date");
                       setSortOrder("asc");
@@ -400,7 +436,13 @@ export default function CustomPaginationActionsTable() {
                 </StyledTableCell>
                 <StyledTableCell>
                   <ArrowUpwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("status");
                       setSortOrder("desc");
@@ -408,7 +450,13 @@ export default function CustomPaginationActionsTable() {
                   />
                   Status
                   <ArrowDownwardIcon
-                    sx={{ fontSize: 15 }}
+                    sx={{
+                      fontSize: 15,
+
+                      "&:hover": {
+                        cursor: "pointer",
+                      },
+                    }}
                     onClick={() => {
                       handleSortClick("status");
                       setSortOrder("asc");
@@ -455,7 +503,7 @@ export default function CustomPaginationActionsTable() {
             <TableFooter>
               <TableRow>
                 <TablePagination
-                  rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
+                  rowsPerPageOptions={[5, 10, 25]}
                   colSpan={3}
                   count={rowValues.length}
                   rowsPerPage={rowsPerPage}
@@ -494,47 +542,47 @@ export default function CustomPaginationActionsTable() {
 }
 // testing data=[
 
-// {id: 1, user_id: 3, survey_date: '08/04/2023', email: 'naidu@gmail.com', status: true}
+// {id: 1, user_id: 3, survey_date: '08/04/2023', email: 'naidu@gmail.com', status: true},
 //
 //
-// {id: 2, user_id: 3, survey_date: '14/04/2023', email: 'mani@gmail.com', status: false}
+// {id: 2, user_id: 3, survey_date: '14/04/2023', email: 'mani@gmail.com', status: false},
 //
 //
-// {id: 3, user_id: 3, survey_date: '18/06/2023', email: 'manikanta@gmail.com', status: false}
+// {id: 3, user_id: 3, survey_date: '18/06/2023', email: 'manikanta@gmail.com', status: false},
 //
 //
-// {id: 4, user_id: 3, survey_date: '19/04/2023', email: 'manikanta@gmail.com', status: false}
+// {id: 4, user_id: 3, survey_date: '19/04/2023', email: 'manikanta@gmail.com', status: false},
 //
 //
-// {id: 5, user_id: 3, survey_date: '19/04/2023', email: 'naidu@gmail.com', status: false}
+// {id: 5, user_id: 3, survey_date: '19/04/2023', email: 'naidu@gmail.com', status: false},
 //
 //
-// {id: 6, user_id: 3, survey_date: '19/04/2023', email: 'naidu@gmail.com', status: false}
+// {id: 6, user_id: 3, survey_date: '19/04/2023', email: 'naidu@gmail.com', status: false},
 //
 //
-// {id: 7, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false}
+// {id: 7, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false},
 //
 //
-// {id: 8, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false}
+// {id: 8, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false},
 //
 //
-// {id: 9, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false}
+// {id: 9, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false},
 //
 //
-// {id: 10, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false}
+// {id: 10, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false},
 //
 //
-// {id: 11, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false}
+// {id: 11, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false},
 //
 //
-// {id: 12, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false}
+// {id: 12, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false},
 //
 //
-// {id: 15, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false}
+// {id: 15, user_id: 3, survey_date: '25/04/2023', email: 'galirajapraveenreddy@gmail.com', status: false},
 //
 //
-// {id: 17, user_id: 3, survey_date: '26/04/2023', email: 'ram999jayaram@gmail.com', status: false}
+// {id: 17, user_id: 3, survey_date: '26/04/2023', email: 'ram999jayaram@gmail.com', status: false},
 //
 //
-// {id: 20, user_id: 3, survey_date: '26/04/2023', email: 'ram999jayaram@gmail.com', status: false}
+// {id: 20, user_id: 3, survey_date: '26/04/2023', email: 'ram999jayaram@gmail.com', status: false},
 // ]

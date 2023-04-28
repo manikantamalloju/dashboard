@@ -93,11 +93,8 @@ const LoginPage = () => {
         });
     },
   });
-  const jwtToken = Cookies.get("jwtToken");
-  if (jwtToken !== undefined) {
-    navigate("/login", { replace: true });
-  }
-  //console.log(formik.values);
+  
+ 
   return (
     <div className="login">
       <div className="login-container">

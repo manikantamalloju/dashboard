@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  NavLink, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import "./index.css";
 function SideBar() {
@@ -13,9 +13,10 @@ function SideBar() {
     Cookies.remove("id");
     Cookies.remove("jwtToken");
 
-    navigate("/login",{replace:true});
+    navigate("/login", { replace: true });
   };
-
+  
+  
   console.log(role, "check");
   return (
     <>
@@ -28,21 +29,41 @@ function SideBar() {
         <hr className="sidebar-line" />
         {role === "admin" ? (
           <>
-            <Link to="/" className="link">
-              <p className="sidebar-para-list">Dashboard</p>
-            </Link>
-            <Link to="/executives" className="link">
-              <p className="sidebar-para-list"> Execuitives</p>
-            </Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "color-sidebar-para-list " : "sidebar-para-list"
+              }
+            >
+              <p>Dashboard</p>
+            </NavLink>
+            <NavLink
+              to="/executives"
+              className={({ isActive }) =>
+                isActive ? "color-sidebar-para-list " : "sidebar-para-list"
+              }
+            >
+              <p> Execuitives</p>
+            </NavLink>
           </>
         ) : (
           <>
-            <Link to="/" className="link">
-              <p className="sidebar-para-list">Dashboard</p>
-            </Link>
-            <Link to="/users" className="link">
-              <p className="sidebar-para-list">Users</p>
-            </Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "color-sidebar-para-list " : "sidebar-para-list"
+              }
+            >
+              <p>Dashboard</p>
+            </NavLink>
+            <NavLink
+              to="/users"
+              className={({ isActive }) =>
+                isActive ? "color-sidebar-para-list " : "sidebar-para-list"
+              }
+            >
+              <p>Users</p>
+            </NavLink>
           </>
         )}
 

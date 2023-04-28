@@ -9,7 +9,6 @@
   width: 95%;
 }
 .user-table-search-button {
-  
   background-color: #42a5f5;
   color: white;
   padding: 10px 20px;
@@ -19,6 +18,12 @@
   font-size: 16px;
   transition: background-color 0.5s;
 }
-.user-table-search-button:hover {
-  background-color: blue;
+.search-container-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-search-table {
+  border: none;
+  outline: none;
 }
